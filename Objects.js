@@ -59,3 +59,10 @@ console.log("Assigned Object: ", assignedObject);
 const spreadObject = {...obj1, ...obj2}
 console.log("\nSpread Object: ", spreadObject);
 
+console.log("\n--------Objects Destucturing------")
+const {email} = jsUser //now email is destructured from this jsUser object we can use this anywhere in our code
+
+console.log("Destructured User's email: ", email)
+
+const {location: userCity} = jsUser //we can use alias here as well
+console.log("\nLocation as userCity: ", userCity)
