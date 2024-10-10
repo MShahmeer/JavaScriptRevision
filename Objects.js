@@ -1,4 +1,4 @@
-//Singleton Objects are created when we create using constuctor like Object.create
+//Singleton Objects are created when we create using constuctor like Object.create or const obj = new Object()
 
 //Object Lietrals
 
@@ -40,3 +40,22 @@ jsUser.greetingsTwo = function(){
 console.log(jsUser.greetings())
 
 console.log(jsUser.greetingsTwo())
+
+console.log("---------Spread Operation in Objects Merging---------")
+
+const obj1 = {
+    1: "a",
+    2: "b"
+}
+
+const obj2 = {
+    3: "c",
+    4: "d"
+}
+
+const assignedObject = Object.assign(obj1, obj2)
+console.log("Assigned Object: ", assignedObject);
+
+const spreadObject = {...obj1, ...obj2}
+console.log("\nSpread Object: ", spreadObject);
+
