@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Child</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const byClassName = document.getElementsByClassName('parent')
+    const byQuery = document.querySelector('.parent')
+    
+    console.log("By ClassName: ", byClassName);
+    console.log("By Query: ", byQuery)
+    
+    const byQueryChild = document.querySelector('.parent').children
+    console.log("ByQuery Children: ",byQueryChild)
+    console.log("ByQuery Children InnerHTML: ",byQueryChild[1].innerHTML)
+
+    byQueryChild[1].style.color = "orange"
+
+    console.log("First Element Child: ", byQuery.firstElementChild)
+
+
+    for (let index = 0; index < byQueryChild.length; index++) {
+        const element = byQueryChild[index];
+        console.log("InnerHTML: ", element)
+    }
+
+    console.log("Day One: ", document.querySelector('.day'))
+    console.log("Day One Parent: ", document.querySelector('.day').parentElement)
+    console.log("Day One next element sibling: ", document.querySelector('.day').nextElementSibling)
+
+    console.log("\nNodes: ", byQuery.childNodes) //this will give the nodelist and every line break is considered as the node in the js that is why we get text in the console.
+</script>
+</html>
