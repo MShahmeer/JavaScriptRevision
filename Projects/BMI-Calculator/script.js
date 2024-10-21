@@ -1,7 +1,7 @@
 const form = document.querySelector('form')
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault()
+    e.preventDefault() //form ki value server pr na chali jae is leay hum is ko roktay hain k hum nay apna abhi kam krna hay
 
     const height = parseInt(document.querySelector('#height').value) //because we get the value in the string
     const weight = parseInt(document.querySelector('#weight').value) //because we get the value in the string
